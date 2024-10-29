@@ -1,6 +1,20 @@
-import "@/styles/globals.css";
+import EmptyLayout from "@/components/Layout/EmptyLayout";
+import { AppContextProvider } from "@/context/AppContextProvider";
+import { AppPropsWithLayout } from "@/models";
+import StoreProviders from "@/stores/StoreProvider";
 import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const Layout = Component.Layout ?? EmptyLayout;
+  return (
+    <>
+      <StoreProviders>
+        <AppContextProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </AppContextProvider>
+      </StoreProviders>
+    </>
+  );
 }
