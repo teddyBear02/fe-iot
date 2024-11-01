@@ -2,9 +2,9 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import api from "@/api";
 import { PayloadLogin, PayloadSignUp } from "@/models";
 
-const base_url = process.env.NEXT_PUBLIC_BASE_URL
+const base_url = process.env.NEXT_PUBLIC_BASE_URL_API
 
-export const signUp = createAsyncThunk('auth/signUp', async (user : PayloadSignUp, thunkAPI) =>{
+export const signUp = createAsyncThunk('auth/register', async (user : PayloadSignUp, thunkAPI) =>{
     try {
         const res = await api.post(`${base_url}/auth/register`,user) 
         if(res.status !== 200){

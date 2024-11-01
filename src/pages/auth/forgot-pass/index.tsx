@@ -1,10 +1,12 @@
+import React from "react";
+import AuthComponent from "@/components/Auth/AuthComponent";
 import HeadAppTitle from "@/components/HeadAppTitle";
 
 const ForgotPassPage = () => {
   return (
     <>
       <HeadAppTitle title="Forgot pass" />
-      <h1>Forgot pass page</h1>
+      <AuthComponent />
     </>
   );
 };

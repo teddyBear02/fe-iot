@@ -4,7 +4,7 @@ import { cookieGet, storageGet } from '@/helpers/appStorage';
 import { StorageKey } from '@/constants';
 import { clearAuthData } from '@/helpers/authHelper';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_BASE_URL_API;
 
 // Request Interceptor
 const onRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {

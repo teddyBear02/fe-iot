@@ -10,7 +10,8 @@ export type ResponseLogin = {
 }
 
 export type PayloadLogin = {
-
+    email: string,
+    password: string
 }
 
 export type PayloadSignUp = {

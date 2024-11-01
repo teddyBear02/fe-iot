@@ -12,6 +12,6 @@ const HomePage: NextPageWithLayout = () => {
   );
 };
 
-// HomePage.Layout = DefaultLayout;
+HomePage.Layout = DefaultLayout;
 
 export default HomePage;

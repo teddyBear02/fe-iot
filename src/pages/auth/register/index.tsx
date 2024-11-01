@@ -1,10 +1,12 @@
+import React from "react";
+import AuthComponent from "@/components/Auth/AuthComponent";
 import HeadAppTitle from "@/components/HeadAppTitle";
 
 const RegisterPage = () => {
   return (
     <>
       <HeadAppTitle title="Register" />
-      <h1>Register page</h1>
+      <AuthComponent />
     </>
   );
 };
